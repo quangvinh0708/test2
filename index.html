@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Animation</title>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      header {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url(./images/sl_bg.jpg);
+        position: relative;
+        overflow : hidden;
+      }
+
+      /* Đám mây */
+      .layer1 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        opacity: 0;
+        animation: dammay 1s forwards;
+      }
+      /* Đám mây */
+
+      @keyframes dammay {
+          from { bottom: -100%; opacity: 0;}
+          to {  bottom: 0; opacity: 1;}
+      }
+
+      /* Cô gái */
+      .layer2 {
+        width: 32%;
+        position: absolute;
+        bottom: 8%;
+        right: 15%;
+        z-index: 2;
+        opacity: 0;
+        animation: cogai 2s forwards;
+        animation-delay: 1s;
+      }
+      /* Cô gái */
+
+      @keyframes cogai {
+          from {transform: translateY(40px); opacity: 0;}
+          to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Hình Trái Tim */
+      .layer3 {
+        position: absolute;
+        top: 25%;
+        right: 10%;
+        width: 38%;
+        opacity: 0;
+        animation: zoom 1s forwards;
+        animation-delay: 1.5s;
+      }
+      /* Hình Trái Tim */
+
+      
+      /* Hình Chấm BI */
+      .layer4 {
+        position: absolute;
+        top: 25%;
+        right: 11%;
+        width: 35%;
+        opacity: 0;
+        animation: zoom 1s forwards;
+        animation-delay: 1.5s;
+      }
+      /* Hình Chấm BI */
+
+      /* Hình Cầu vồng*/
+      .layer5 {
+        position: absolute;
+        bottom: 10%;
+        right: 12%;
+        width: 40%;
+        opacity: 0;
+        animation: zoom 1s forwards;
+        animation-delay: 2s;
+      }
+      /* Hình Cầu vồng*/
+
+      @keyframes zoom {
+          from {transform: scale(0.4); opacity: 0;}
+          to { transform: scale(1); opacity: 1;}
+      }
+
+      .text {
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        font-size: 40px;
+        font-family: "Satisfy", cursive;
+        color: white;
+        opacity: 0;
+        animation: sangphai 1s forwards;
+        animation-delay: 2.8s;
+      }
+
+      @keyframes sangphai{
+        from {transform: scaleX(0.3) translateX(-100px)}
+        to {transform: scaleX(1) translateX(0); opacity: 1;}
+      }
+
+      .nut {
+        position: absolute;
+        top: 65%;
+        left: 20%;
+        opacity: 0;
+        animation: dilen 1.5s forwards;
+        animation-delay: 3.8s;
+      }
+
+      @keyframes dilen {
+          from {opacity: 0; transform: translateY(200px)}
+          to {opacity: 1; transform: translateY();}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./images/h1.png" alt="" class="layer1" />
+      <img src="./images/h2.png" alt="" class="layer2" />
+      <img src="./images/h3.png" alt="" class="layer3" />
+      <img src="./images/h4.png" alt="" class="layer4" />
+      <img src="./images/h5.png" alt="" class="layer5" />
+      <div class="text">
+        We understand what <br />
+        your child means <br />
+        to you ABC
+      </div>
+      <a href=""><img src="./images/nut_1.png" alt="" class="nut" /> </a>
+    </header>
+  </body>
+</html>
